@@ -1,33 +1,15 @@
-$(function() {
-
-	$.scrollify({
-		section:".panel",
-		after:function(i) {
-
-/*
-			if(i===2) {
-				$.scrollify.setOptions({
-					easing:"easeOutExpo"
-				});
-			}*/
-
-		}
-	});
-
-	$(".scroll,.scroll-btn").click(function(e) {
-		e.preventDefault();
-
-		$.scrollify.next();
-	});
-});
-
-
 $(document).ready(function(){
-
+  // SinglePage Navigation
+  $('.single-page-nav').singlePageNav({
+    // offset for sticky navigation menu
+    // offset: $('.single-page-nav').outerHeight(),
+    filter: ':not(.external)',
+    updateHash: false,
+  });
 
 /*calling of lightbox plugin */$('a[data-rel^=lightcase]').lightcase();
 
-// Begin of icon-menu transfomation
+// Begin of icon-menu transfomation (hamburger)
     $('#nav-icon1').click(function(){
       $(this).toggleClass('open');
     });
@@ -83,6 +65,6 @@ $(document).ready(function(){
         });
     }
   });
+/*END of filtering of tiles*/
 
 })(jQuery);
-/*END of filtering of tiles*/
