@@ -145,6 +145,7 @@ h4 {
     display: block;
     font-size: 14px;
     fill: currentColor;
+    color: #bebebe;
     margin-bottom: 2em;
 }
 
@@ -156,13 +157,17 @@ h4 {
 /* THE FIRST SECTION */
 
 .home {
-    color: #fff;
+    color: #f8f8ff;
+    background-color: #fff;
+    background: url(../img/main_bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
     font-size: 3em;
     font-weight: 800;
-    color: #fff;
+    color: #f8f8ff;
 }
 
 p {
@@ -177,7 +182,7 @@ p {
 .nav a {
     margin-left: 20px;
     font-size: 1.4em;
-    color: #fff;
+    color: #f8f8ff;
     text-decoration: none;
     padding-bottom: 3px;
     text-transform: uppercase;
@@ -189,7 +194,7 @@ nav {
 }
 
 .nav a:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #f8f8ff;
 }
 
 
@@ -220,7 +225,7 @@ nav {
     position: absolute;
     height: 2px;
     width: 100%;
-    background: #000;
+    background: #bebebe;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -266,41 +271,7 @@ nav {
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
-
-
 /*end hamburger*/
-
-@media (max-width: 767px) {
-    .inner {
-        width: 95%;
-    }
-    .logo {
-        float: left;
-        font-size: 2.5em;
-    }
-    .nav {
-        display: none;
-    }
-    .nav li {
-        margin: 0 auto;
-        width: 90vw;
-        display: block;
-        text-align: center;
-    }
-    .nav li a {
-        display: block;
-        text-align: center;
-        font-weight: bold;
-    }
-    .nav li a:hover {
-        border-bottom: none;
-        background: rgba(0, 0, 0, .1);
-    }
-    #touch-menu {
-        display: inline-block;
-        float: right;
-    }
-}
 
 .slogan {
     text-align: center;
@@ -328,8 +299,8 @@ nav {
     width: 40px;
     height: 40px;
     position: absolute;
-    margin: auto;
-    top: 10px;
+    margin: 1px auto;
+    top: 20px;
     right: 0;
     left: 0;
     -webkit-animation: 3s arrow infinite ease;
@@ -368,10 +339,6 @@ nav {
     padding: 0;
 }
 
-.home {
-    background: url(../img/main_bg.jpg) no-repeat;
-    background-size: cover;
-}
 
 
 /* THE SECOND SECTION */
@@ -410,8 +377,6 @@ nav {
         transform: none;
     }
 }
-
-
 /* ENDfiltering of tiles */
 
 
@@ -481,8 +446,6 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 /*END of hover animation for tiles*/
 
 
@@ -494,18 +457,6 @@ nav {
 
 
 /* THE FOURTH SECTION */
-
-.cart {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(243, 243, 243, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(243, 243, 243, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(243, 243, 243, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-
-/* THE FIFTH SECTION */
 
 .contacts {
     width: 80%;
@@ -525,14 +476,17 @@ nav {
     margin-top: 3vh;
 }
 
-.contacts__form input[type=text], input[type=email] {
+.contacts__form input[type=text], input[type=email], input[type=tel] {
     width: 100%;
     height: 6vh;
     padding: 0.9em 1.2em;
     border: 1px solid #E1E1E1;
 }
 
-input[type=text]:focus, input[type=email]:focus, .contacts__form textarea:focus {
+input[type=text]:focus, 
+input[type=email]:focus, 
+input[type=tel]:focus,
+.contacts__form textarea:focus {
     border: none;
     outline: 1px solid #666;
 }
@@ -596,4 +550,49 @@ input[type=text]:focus, input[type=email]:focus, .contacts__form textarea:focus 
 .footer__inner span {
     margin-top: 0px;
     color: #000;
+}
+
+@media only screen 
+and (max-width : 960px) {
+    .home {
+        background: url(../img/main_bg_960.jpg) no-repeat;
+    }
+
+}
+
+@media only screen 
+and (max-width : 767px) {
+    .home {
+        background: url(../img/main_bg_767.jpg) no-repeat;
+    }
+    .inner {
+        width: 95%;
+    }
+    .logo {
+        float: left;
+        font-size: 2.5em;
+    }
+    .nav {
+        display: none;
+    }
+    .nav li {
+        margin: 0 auto;
+        width: 90vw;
+        display: block;
+        text-align: center;
+    }
+    .nav li a {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
+    .nav li a:hover {
+        border-bottom: none;
+        background: rgba(0, 0, 0, .1);
+    }
+    #touch-menu {
+        display: inline-block;
+        float: right;
+    }
+
 }
