@@ -36,7 +36,8 @@
 <body>
 	<!-- THE FIRST SECTION -->
 	<section class="panel home" id="section1">
-		<div class="inner">
+		<div class="blur"></div>
+		<div class="inner inner-wrapper">
 			<header class="header">
 				<div class="row">
 					<div class="col-xs-12 col-sm-4">
@@ -61,16 +62,16 @@
 								<li><a href="#section1">головна</a></li>
 								<li><a href="#section2">галерея</a></li>
 								<li><a href="#section3">історія</a></li>
-								<li><a href="#section4">замовити</a></li>
-								<li><a href="#section5">контакти</a></li>
+								<li><a href="#section4">контакти</a></li>
+
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</header>
 			<div class="row  inner slogan">
-				<h1>OKAMA</h1>
-				<p class="tagline">Предмети декору та інтер'єру, що не мають зайвого.</p>
+				<h1>OKAMA - <span>нічого зайвого</span></h1>
+				<p class="tagline">Предмети декору та інтер'єру зі скла, гіпсу, бетону.</p>
 			</div>
 			<div class="scroll">
 				<a href="#section2"></a>
@@ -83,6 +84,7 @@
 				<a href="#"><span class="icon icon-vk"></span></a>
 			</div>
 		</div>
+
 	</section>
 	<!-- THE SECOND SECTION -->
 	<section class="panel projects" id="section2">
@@ -211,12 +213,18 @@
 			<div class="col-xs-12 col-sm-6 contacts__form">
 				<h4>напишіть нам</h4>
 				<div class="screen-reader-response"></div>
-				<form action="#" method="post" class="#">
-					<p><input type="text" name="name" value="" placeholder="Ім'я" class="contacts__form-input" required></p>
-					<p><input type="email" name="email" value="" placeholder="Email" class="contacts__form-input" required></p>
-					<p><input type="tel" name="tel" value="" class="contacts__form-input" placeholder="Телефон" required></p>
-					<p><textarea name="message" placeholder="Повідомлення" class="contacts__form-textarea" required></textarea></p>
-					<p><input type="submit" value="надіслати" class="contacts__form-button"></p>
+				<form>
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="okama.com.ua">
+					<input type="hidden" name="admin_email" value="okama.production@gmail.com">
+					<input type="hidden" name="form_subject" value="Letter from Okama">
+					<!-- END Hidden Required Fields -->
+
+					<label><input type="text" name="name" value="" placeholder="Ім'я" class="contacts__form-input" required></label>
+					<label><input type="email" name="email" value="" placeholder="Email" class="contacts__form-input" required></label>
+					<label><input type="text" name="tel" value="" class="contacts__form-input" placeholder="Телефон" required></label>
+					<label><textarea name="message" placeholder="Повідомлення" class="contacts__form-textarea" required></textarea></label>
+					<input type="submit" value="надіслати" class="contacts__form-button">
 				</form>
 			</div>
 		</div>
@@ -265,6 +273,7 @@
 
 	<!-- SCRIPTS -->
 	<script src="js/libs.min.js "></script>
+	<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 	<script src="js/common.js "></script>
 </body>
 
